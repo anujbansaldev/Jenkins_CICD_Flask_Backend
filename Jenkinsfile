@@ -1,4 +1,4 @@
-﻿pipeline {
+pipeline {
     agent any
 
     options {
@@ -18,7 +18,7 @@
                 sh 'python3 -m venv .venv'
                 sh '.venv/bin/pip install -r requirements.txt'
             }
-        }
+        }`
 
         stage('Run Unit Tests') {
             steps {

@@ -44,7 +44,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    rsync -a \
+                    rsync -r \
                         --exclude='.git/' \
                         --exclude='.venv/' \
                         --exclude='__pycache__/' \
